@@ -1,0 +1,22 @@
+-- Essentials
+require("settings")
+require("keymappings")
+require("plugins")
+
+-- Theme
+require("colorscheme")
+
+-- Plugins config
+require("plugins.nvim-tree")
+require("plugins.telescope")
+require("plugins.autopairs")
+require("plugins.treesitter")
+require("plugins.comment")
+require("plugins.gitsigns")
+require("plugins.bufferline")
+
+-- Completions
+require("plugins.cmp")
+
+-- LSP
+require("lsp.config")
