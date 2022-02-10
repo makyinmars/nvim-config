@@ -47,5 +47,5 @@ keymap("n", "<Leader>pw", "<CMD>Telescope grep_string<CR><ESC>", nvim_opts)
 -- Vim bbye
 keymap("n", "<Leader>-", ":Bdelete<CR>", nvim_opts)
 
---
+-- Formatting
 keymap("n", "<S-f>", ":Format<CR>", opts)

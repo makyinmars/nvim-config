@@ -2,6 +2,7 @@
 require("settings")
 require("keymappings")
 require("plugins")
+require("autocommands")
 
 -- Theme
 require("colorscheme")
