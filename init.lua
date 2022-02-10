@@ -15,6 +15,12 @@ require("plugins.comment")
 require("plugins.gitsigns")
 require("plugins.bufferline")
 require("plugins.lualine")
+require("plugins.alpha")
+require("plugins.impatient")
+require("plugins.indentline")
+require("plugins.project")
+require("plugins.toggleterm")
+require("plugins.whichkey")
 
 -- Completions
 require("plugins.cmp")
