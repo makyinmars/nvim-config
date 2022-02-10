@@ -14,6 +14,7 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.eslint_d,
+    formatting.autopep8,
 		-- formatting.yapf,
 		formatting.stylua,
 		diagnostics.flake8,
