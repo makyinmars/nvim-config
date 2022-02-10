@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
   use {'kyazdani42/nvim-web-devicons'}
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- JSX Comments
+  use 'nvim-lualine/lualine.nvim'
 
   -- LSP
   use { "neovim/nvim-lspconfig", 'williamboman/nvim-lsp-installer' } -- enable LSP

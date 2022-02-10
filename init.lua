@@ -14,6 +14,7 @@ require("plugins.treesitter")
 require("plugins.comment")
 require("plugins.gitsigns")
 require("plugins.bufferline")
+require("plugins.lualine")
 
 -- Completions
 require("plugins.cmp")
