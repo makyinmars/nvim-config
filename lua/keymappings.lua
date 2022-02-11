@@ -30,8 +30,8 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
 
 -- Buffers
-keymap("n", "<Tab>", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<S-Tab>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
