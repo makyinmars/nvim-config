@@ -96,6 +96,9 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 
+	-- Scrolling
+	use("karb94/neoscroll.nvim")
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
