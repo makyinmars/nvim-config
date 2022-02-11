@@ -76,7 +76,7 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lua")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
-  use("f3fora/cmp-spell") -- Spell suggest
+	use("f3fora/cmp-spell") -- Spell suggest
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -104,8 +104,8 @@ return require("packer").startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/playground")
 
-  -- Status line component/context
-  use("SmiteshP/nvim-gps")
+	-- Status line component/context
+	use("SmiteshP/nvim-gps")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
