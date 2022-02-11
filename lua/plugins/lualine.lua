@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+local gps = require("nvim-gps")
+
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
@@ -10,7 +12,10 @@ end
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
+	sections = { "error", "warn", { lualine_c = {
+		gps.get_location,
+		cond = gps.is_available,
+	} } },
 	symbols = { error = " ", warn = " " },
 	colored = false,
 	update_in_insert = false,
@@ -21,7 +26,7 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
+	cond = hide_in_width,
 }
 
 local mode = {

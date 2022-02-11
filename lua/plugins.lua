@@ -104,6 +104,9 @@ return require("packer").startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/playground")
 
+  -- Status line component/context
+  use("SmiteshP/nvim-gps")
+
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
