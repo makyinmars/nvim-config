@@ -92,6 +92,9 @@ return require("packer").startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
+  -- Scrollbar
+  use("dstein64/nvim-scrollview")
+
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
