@@ -22,6 +22,8 @@ require("plugins.indentline")
 require("plugins.project")
 require("plugins.toggleterm")
 require("plugins.whichkey")
+require("plugins.nvim-gps")
+require("plugins.neoscroll")
 
 -- Completions
 require("plugins.cmp")

@@ -30,8 +30,8 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
 
 -- Buffers
-keymap("n", "<Tab>", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<S-Tab>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -49,3 +49,7 @@ keymap("n", "<Leader>-", ":Bdelete<CR>", nvim_opts)
 
 -- Formatting
 keymap("n", "<S-f>", ":Format<CR>", opts)
+
+-- Split screen
+keymap("n", "<leader>v", ":vsplit<CR>", opts)
+keymap("n", "<leader>h", ":hsplit<CR>", opts)
