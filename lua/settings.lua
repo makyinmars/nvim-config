@@ -41,8 +41,8 @@ local options = {
 	fileencoding = "utf-8", --- The encoding written to file
 	incsearch = true, --- Start searching before pressing enter
 	showmode = false, --- Don't show things like -- INSERT -- anymore
-	spell = true, -- Spell suggestions
-	spelllang = { "en_us" }, -- Spell suggestions
+	-- spell = true, -- Spell suggestions
+	-- spelllang = { "en_us" }, -- Spell suggestions
 }
 
 local globals = {
