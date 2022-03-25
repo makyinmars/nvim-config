@@ -101,6 +101,9 @@ return require("packer").startup(function(use)
 	-- Scrolling
 	use("karb94/neoscroll.nvim")
 
+  -- Markdown
+  use({"iamcco/markdown-preview.nvim", run = "cd app && yarn install"})
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
