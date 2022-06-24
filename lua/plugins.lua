@@ -91,6 +91,9 @@ return require("packer").startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
+  -- Copilot
+  use "github/copilot.vim"
+
   -- Scrollbar
   use("dstein64/nvim-scrollview")
 
