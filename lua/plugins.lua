@@ -54,7 +54,13 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- JSX Comments
 	use("nvim-lualine/lualine.nvim")
-	use("akinsho/toggleterm.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v1.*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
@@ -88,14 +94,15 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 
 	-- Buffer line
-	use("akinsho/bufferline.nvim")
+	-- using packer.nvim
+	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("moll/vim-bbye")
 
-  -- Copilot
-  use "github/copilot.vim"
+	-- Copilot
+	use("github/copilot.vim")
 
-  -- Scrollbar
-  use("dstein64/nvim-scrollview")
+	-- Scrollbar
+	use("dstein64/nvim-scrollview")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -104,8 +111,8 @@ return require("packer").startup(function(use)
 	-- Scrolling
 	use("karb94/neoscroll.nvim")
 
-  -- Markdown
-  use({"iamcco/markdown-preview.nvim", run = "cd app && yarn install"})
+	-- Markdown
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
 
 	-- Treesitter
 	use({
