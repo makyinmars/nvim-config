@@ -57,9 +57,6 @@ return require("packer").startup(function(use)
 	use({
 		"akinsho/toggleterm.nvim",
 		tag = "v1.*",
-		config = function()
-			require("toggleterm").setup()
-		end,
 	})
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
