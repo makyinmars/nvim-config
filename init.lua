@@ -24,6 +24,8 @@ require("plugins.toggleterm")
 require("plugins.whichkey")
 require("plugins.nvim-gps")
 require("plugins.neoscroll")
+require("plugins.copilot")
+require("plugins.icons")
 
 -- Completions
 require("plugins.cmp")

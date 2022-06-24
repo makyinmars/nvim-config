@@ -77,6 +77,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	use("hrsh7th/cmp-emoji")
 	use("hrsh7th/cmp-nvim-lua")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
@@ -96,8 +97,20 @@ return require("packer").startup(function(use)
 	use("moll/vim-bbye")
 
 	-- Copilot
-	use("github/copilot.vim")
-
+	-- use("github/copilot.vim")
+	use({
+		"zbirenbaum/copilot.lua",
+		event = { "VimEnter" },
+		config = function()
+			vim.defer_fn(function()
+				require("plugins.copilot")
+			end, 100)
+		end,
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		module = "copilot_cmp",
+	})
 	-- Scrollbar
 	use("dstein64/nvim-scrollview")
 
