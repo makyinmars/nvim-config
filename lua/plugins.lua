@@ -54,7 +54,10 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- JSX Comments
 	use("nvim-lualine/lualine.nvim")
-	use("akinsho/toggleterm.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v1.*",
+	})
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
@@ -74,6 +77,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	use("hrsh7th/cmp-emoji")
 	use("hrsh7th/cmp-nvim-lua")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
@@ -88,11 +92,27 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 
 	-- Buffer line
-	use("akinsho/bufferline.nvim")
+	-- using packer.nvim
+	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("moll/vim-bbye")
 
-  -- Scrollbar
-  use("dstein64/nvim-scrollview")
+	-- Copilot
+	-- use("github/copilot.vim")
+	use({
+		"zbirenbaum/copilot.lua",
+		event = { "VimEnter" },
+		config = function()
+			vim.defer_fn(function()
+				require("plugins.copilot")
+			end, 100)
+		end,
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		module = "copilot_cmp",
+	})
+	-- Scrollbar
+	use("dstein64/nvim-scrollview")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -101,8 +121,8 @@ return require("packer").startup(function(use)
 	-- Scrolling
 	use("karb94/neoscroll.nvim")
 
-  -- Markdown
-  use({"iamcco/markdown-preview.nvim", run = "cd app && yarn install"})
+	-- Markdown
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
 
 	-- Treesitter
 	use({
