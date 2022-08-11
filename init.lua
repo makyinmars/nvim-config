@@ -26,6 +26,7 @@ require("plugins.nvim-gps")
 require("plugins.neoscroll")
 require("plugins.copilot")
 require("plugins.icons")
+require("plugins.colorizer")
 
 -- Completions
 require("plugins.cmp")

@@ -124,6 +124,9 @@ return require("packer").startup(function(use)
 	-- Markdown
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
 
+  -- Colorizer for css
+  use("norcalli/nvim-colorizer.lua")
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
