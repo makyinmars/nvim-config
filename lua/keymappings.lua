@@ -55,4 +55,6 @@ keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<leader>h", ":hsplit<CR>", opts)
 
 -- Motion
-keymap("n", "<leader>-", ":HopWord<CR>", opts)
+keymap("n", "<leader>0A", ":HopWord<CR>", opts)
+keymap("n", "<leader>0a", ":HopWordAC<CR>", opts)
+keymap("n", "<leader>0b", ":HopWordBC<CR>", opts)
