@@ -27,6 +27,7 @@ require("plugins.neoscroll")
 require("plugins.copilot")
 require("plugins.icons")
 require("plugins.colorizer")
+require("plugins.autotag")
 
 -- Completions
 require("plugins.cmp")
