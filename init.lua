@@ -28,6 +28,7 @@ require("plugins.copilot")
 require("plugins.icons")
 require("plugins.colorizer")
 require("plugins.autotag")
+require("plugins.hop")
 
 -- Completions
 require("plugins.cmp")

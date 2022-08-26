@@ -53,3 +53,6 @@ keymap("n", "<S-f>", ":Format<CR>", opts)
 -- Split screen
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<leader>h", ":hsplit<CR>", opts)
+
+-- Motion
+keymap("n", "<leader>-", ":HopWord<CR>", opts)

@@ -65,8 +65,8 @@ return require("packer").startup(function(use)
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
 
-  -- Autotag
-  use("windwp/nvim-ts-autotag")
+	-- Autotag
+	use("windwp/nvim-ts-autotag")
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" }) -- enable LSP
@@ -93,6 +93,9 @@ return require("packer").startup(function(use)
 
 	-- Explorer
 	use("kyazdani42/nvim-tree.lua")
+
+	-- Motion
+	use({ "phaazon/hop.nvim", branch = "v2" })
 
 	-- Buffer line
 	-- using packer.nvim
