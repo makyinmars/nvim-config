@@ -91,6 +91,9 @@ return require("packer").startup(function(use)
 	-- Colorscheme
 	use("folke/tokyonight.nvim")
 
+  -- Discord Presence
+  use("andweeb/presence.nvim")
+
 	-- Explorer
 	use("kyazdani42/nvim-tree.lua")
 
