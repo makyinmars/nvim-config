@@ -54,10 +54,6 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- JSX Comments
 	use("nvim-lualine/lualine.nvim")
-	--[[ use({ ]]
-	--[[ 	"akinsho/toggleterm.nvim", ]]
-	--[[ 	tag = "v1.*", ]]
-	--[[ }) ]]
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
