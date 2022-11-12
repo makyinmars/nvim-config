@@ -33,4 +33,4 @@ require("plugins.hop")
 require("plugins.cmp")
 
 -- LSP
-require("lsp.config")
+require("lsp.mason")

@@ -94,6 +94,106 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
+local sumneko_lua = require("lsp.servers.sumneko_lua")
+local tailwind_css = require("lsp.servers.tailwindcss")
+local jsonls = require("lsp.servers.jsonls")
+local pyright = require("lsp.servers.pyright")
+local tsserver = require("lsp.servers.tsserver")
+local diagnosticls = require("lsp.servers.diagnosticls")
+local emmet_ls = require("lsp.servers.emmet_ls")
+local graphql = require("lsp.servers.graphql")
+local html = require("lsp.servers.html")
+local cssls = require("lsp.servers.cssls")
+local dockerls = require("lsp.servers.dockerls")
+local eslint = require("lsp.servers.eslint")
+local gopls = require("lsp.servers.gopls")
+local prismals = require("lsp.servers.prismals")
+
+require("lspconfig")["sumneko_lua"].setup({
+	settings = sumneko_lua.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["tailwind_css"].setup({
+	settings = tailwind_css.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["jsonls"].setup({
+	settings = jsonls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["pyright"].setup({
+	settings = pyright.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["tsserver"].setup({
+	settings = tsserver.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["diagnosticls"].setup({
+	settings = diagnosticls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["emmet_ls"].setup({
+	settings = emmet_ls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["graphql"].setup({
+	settings = graphql.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["html"].setup({
+	settings = html.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["dockerls"].setup({
+	settings = dockerls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["eslint"].setup({
+	settings = eslint.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["gopls"].setup({
+	settings = gopls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["prismals"].setup({
+	settings = prismals.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["cssls"].setup({
+	settings = cssls.settings,
+	on_attach = M.on_attach,
+	capabilities = capabilities,
+})
+
+
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
 	return
