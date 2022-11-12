@@ -34,3 +34,6 @@ require("plugins.cmp")
 
 -- LSP
 require("lsp.config")
+
+-- Maon LSP
+require("plugins.mason")
