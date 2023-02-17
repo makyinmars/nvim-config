@@ -109,7 +109,7 @@ local eslint = require("lsp.servers.eslint")
 local gopls = require("lsp.servers.gopls")
 local prismals = require("lsp.servers.prismals")
 
-require("lspconfig")["sumneko_lua"].setup({
+require("lspconfig")["lua_ls"].setup({
 	settings = sumneko_lua.settings,
 	on_attach = M.on_attach,
 	capabilities = capabilities,
