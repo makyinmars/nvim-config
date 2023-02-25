@@ -106,7 +106,7 @@ return require("packer").startup(function(use)
 	use("moll/vim-bbye")
 
 	-- Copilot
-	-- use("github/copilot.vim")
+	use("github/copilot.vim")
 	use({
 		"zbirenbaum/copilot.lua",
 		event = { "VimEnter" },

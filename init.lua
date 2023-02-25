@@ -23,7 +23,6 @@ require("plugins.project")
 require("plugins.whichkey")
 require("plugins.nvim-gps")
 require("plugins.neoscroll")
---[[ require("plugins.copilot") ]]
 require("plugins.icons")
 require("plugins.colorizer")
 require("plugins.autotag")
