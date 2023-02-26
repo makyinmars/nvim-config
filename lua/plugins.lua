@@ -106,20 +106,25 @@ return require("packer").startup(function(use)
 	use("moll/vim-bbye")
 
 	-- Copilot
-	use("github/copilot.vim")
 	use({
 		"zbirenbaum/copilot.lua",
-		event = { "VimEnter" },
+		cmd = "Copilot",
+		event = "InsertEnter",
 		config = function()
-			vim.defer_fn(function()
-				require("plugins.copilot")
-			end, 100)
+			require("copilot").setup({
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
 		end,
 	})
 	use({
 		"zbirenbaum/copilot-cmp",
-		module = "copilot_cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
 	})
+
 	-- Scrollbar
 	use("dstein64/nvim-scrollview")
 
