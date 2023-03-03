@@ -105,6 +105,9 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("moll/vim-bbye")
 
+	-- Surround vim
+	use("tpope/vim-surround")
+
 	-- Copilot
 	use({
 		"zbirenbaum/copilot.lua",
