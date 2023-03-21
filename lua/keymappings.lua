@@ -58,3 +58,9 @@ keymap("n", "<leader>h", ":hsplit<CR>", opts)
 keymap("n", "<leader>0A", ":HopWord<CR>", opts)
 keymap("n", "<leader>0a", ":HopWordAC<CR>", opts)
 keymap("n", "<leader>0b", ":HopWordBC<CR>", opts)
+
+-- Harpoon
+keymap("n", "<leader>Ha", ":lua require('harpoon.mark').add_file()<CR>", opts)
+keymap("n", "<leader>Hm", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+keymap("n", "<leader>Hn", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+keymap("n", "<leader>Hp", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
